@@ -31,14 +31,14 @@ int main(int argc, char** argv){
   while(1)
   {
     // First Goal
-    goal.target_pose.pose.position.x = 0.01;
-    goal.target_pose.pose.position.y = -1.98;
+    goal.target_pose.pose.position.x = -0.87;
+    goal.target_pose.pose.position.y = -0.52;
     goal.target_pose.pose.position.z = 0.0;
 
     goal.target_pose.pose.orientation.x = 0;
     goal.target_pose.pose.orientation.y = 0;
-    goal.target_pose.pose.orientation.z = 0.70;
-    goal.target_pose.pose.orientation.w = 0.71;
+    goal.target_pose.pose.orientation.z = 0.06;
+    goal.target_pose.pose.orientation.w = 0.99;
 
     // Send the goal position and orientation for the robot to reach
     ROS_INFO("Sending Pick-Up goal");
@@ -60,14 +60,14 @@ int main(int argc, char** argv){
     sleep(5);
     
     // Second Goal
-    goal.target_pose.pose.position.x = 2.01;
-    goal.target_pose.pose.position.y = 0.56;
+    goal.target_pose.pose.position.x = 1.96;
+    goal.target_pose.pose.position.y = 0.79;
     goal.target_pose.pose.position.z = 0.0;
 
     goal.target_pose.pose.orientation.x = 0;
     goal.target_pose.pose.orientation.y = 0;
-    goal.target_pose.pose.orientation.z = 0.99;
-    goal.target_pose.pose.orientation.w = 0.10;
+    goal.target_pose.pose.orientation.z = -0.71;
+    goal.target_pose.pose.orientation.w = 0.70;
 
     ROS_INFO("Sending Drop-Off goal");
     ac.sendGoal(goal);

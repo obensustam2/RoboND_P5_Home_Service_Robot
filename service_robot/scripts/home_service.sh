@@ -10,7 +10,7 @@ gnome-terminal --tab -- bash -c "roscore"
 sleep 4
 
 echo "Starting Turtlebot3 World"
-gnome-terminal --tab -- bash -c "roslaunch  service_robot world.launch"
+gnome-terminal --tab -- bash -c "roslaunch service_robot world.launch"
 sleep 5
 
 echo "Starting Navigation"
@@ -22,7 +22,7 @@ gnome-terminal --tab -- bash -c "roslaunch service_robot view_navigation.launch"
 sleep 4
 
 echo "Starting Pick Objects"
-gnome-terminal --tab -- bash -c "rosrun pick_objects pick_objects"
+gnome-terminal --tab -- bash -c "rosrun add_markers add_markers"
 
 echo "Starting Add Markers"
-gnome-terminal --tab -- bash -c "rosrun add_markers add_markers"
+gnome-terminal --tab -- bash -c "rosrun pick_objects pick_objects"

@@ -61,13 +61,13 @@ int main( int argc, char** argv )
       case 0: // Publish the marker at the pick up zone 
       {
         marker.action = 0;
-        marker.pose.position.x = 0.01;
-        marker.pose.position.y = -1.98;
+        marker.pose.position.x = -0.87;
+        marker.pose.position.y = -0.52;
         marker.pose.position.z = 0.0;
-        marker.pose.orientation.x = 0.0;
-        marker.pose.orientation.y = 0.0;
-        marker.pose.orientation.z = 0.70;
-        marker.pose.orientation.w = 0.71;
+        marker.pose.orientation.x = 0;
+        marker.pose.orientation.y = 0;
+        marker.pose.orientation.z = 0.06;
+        marker.pose.orientation.w = 0.99;
         ROS_INFO("Marker is published at Pick-up goal");
         break;
       }
@@ -83,17 +83,17 @@ int main( int argc, char** argv )
       case 2: // Publish the marker at the drop off zone
       {
         marker.action = 0;
-        marker.pose.position.x = 2.01;
-        marker.pose.position.y = 0.56;
+        marker.pose.position.x = 1.96;
+        marker.pose.position.y = 0.79;
         marker.pose.position.z = 0.0;
-        marker.pose.orientation.x = 0.0;
-        marker.pose.orientation.y = 0.0;
-        marker.pose.orientation.z = 0.99;
-        marker.pose.orientation.w = 0.10;
-        //marker_pub.publish(marker);
+        marker.pose.orientation.x = 0;
+        marker.pose.orientation.y = 0;
+        marker.pose.orientation.z = -0.71;
+        marker.pose.orientation.w = 0.70;
+        marker_pub.publish(marker);
         ROS_INFO("Marker is published at Drop-Off goal");
         goal_reach_state=0;
-        sleep(2);
+        sleep(3);
         break;
       }
     } // switch
