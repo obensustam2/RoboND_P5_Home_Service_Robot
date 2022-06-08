@@ -3,7 +3,7 @@ The aim of the project is to program a robot than can autonomously go to pick up
 
 <p align="center">
   <img width="600" height="600" src="images/Home_Service_Robot.gif">
-  <br>Robot is navigating autonomously
+  <br>Service robot is working
 </p>
 
 ## Installations
