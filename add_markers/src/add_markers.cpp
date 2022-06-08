@@ -10,13 +10,13 @@ uint8_t goal_reach_state = 0;
 /* robot goal proximity callback function */
 void goalReachCallback(const std_msgs::UInt8::ConstPtr& msg)
 {
-   goal_reach_state = msg->data;
-   if (goal_reach_state==2)
-      ROS_INFO("2");
-    else if (goal_reach_state==1)
-      ROS_INFO("1");
+  goal_reach_state = msg->data;
+  // if (goal_reach_state==2)
+  //   ROS_INFO("2 - Drop-Off goal is reached");
+  // else if (goal_reach_state==1)
+  //   ROS_INFO("1 - Pick-Up goal is reached");
   
-   return;
+  return;
 }
 
 int main( int argc, char** argv )
@@ -75,7 +75,7 @@ int main( int argc, char** argv )
       case 1: // Hide the marker 
       {
         marker.action = 2;
-        marker_pub.publish(marker);
+        //marker_pub.publish(marker);
         ROS_INFO("Marker is hided");
         break;
       }
@@ -90,7 +90,7 @@ int main( int argc, char** argv )
         marker.pose.orientation.y = 0.0;
         marker.pose.orientation.z = 0.99;
         marker.pose.orientation.w = 0.10;
-        marker_pub.publish(marker);
+        //marker_pub.publish(marker);
         ROS_INFO("Marker is published at Drop-Off goal");
         goal_reach_state=0;
         sleep(2);
